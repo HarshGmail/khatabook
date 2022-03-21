@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}New Transaction{% endblock title %} 
+{% block body %}
+<section class="is-info is-fullheigh">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <form method="POST">
+              
+              <div class="field">
+                <label class="label">Aadhar card Number</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="text" name="aadhar" placeholder="Aadhar number">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div class="field">
+                <label class="label">Amount</label>
+                <p class="control has-icons-left">
+                  <input class="input" type="text" name="amount" placeholder="Amout">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+
+
+              <div class="field">
+                <p class="control">
+                  <button type="submit" class="button is-success">
+                    Submit
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock body %}

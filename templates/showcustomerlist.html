@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Customer List{% endblock title %} 
+{% block body %}
+
+<!--This is the table part-->
+<div class="container my-3">
+    <h3>Customer list</h3>
+      <table class="table table-striped table-hover table-bordered border-dark">
+          <thead>
+              <tr>
+                <th scope="col">Sl.no</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Customer Aadhar Card</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in cdb %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{row.customer_name}}</td>
+                <td>{{row.phnumber}}</td>
+                <td>{{row.aadhar_card}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+      </table>
+  </div>
+{% endblock body %}
